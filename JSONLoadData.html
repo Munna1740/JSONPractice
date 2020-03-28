@@ -9,7 +9,12 @@
     <h1>JSON Load Data</h1>
 
     <ul id="users-container">
+        <h1>User Names:</h1>
 
+
+    </ul>
+    <ul id="users-container2">
+        <h1>Email:</h1>
 
     </ul>
 
@@ -22,17 +27,26 @@
         function displayUser(users){
             const userName = users.map(user => user.username );
             const ul = document.getElementById("users-container");
+            
             for(let i=0 ; i<userName.length;i++){
                 const user = userName[i];
                 const li = document.createElement("li");
                 li.innerText = user;
                 ul.appendChild(li);
             }
+
+            const userEmail = users.map(userE =>userE.email);
+            const ul2 = document.getElementById("users-container2");
+
+            for (let j = 0; j<userEmail.length; j++){
+                const email = userEmail[j];
+                const li = document.createElement("li");
+                li.innerText = email;
+                ul2.appendChild(li);
+                
+
+            }
         }
-
-
-
-
     </script>
 
 
